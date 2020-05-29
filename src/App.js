@@ -13,13 +13,26 @@ class App extends React.Component {
             }
         }
     }
+    handleInput(e){
+        this.setState({
+            currentItem:{
+                text: e.target.value,
+                key: Date.now()
+            }
+        })
+    }
 
     render() {
     return (
         <div className="App">
           <header>
             <form id="to-do-form" onSubmit={this.addItem}>
-              <input type="text" placeholder="Enter task"  ></input>
+              <input type="text"
+                     placeholder="Enter task"
+                     value= {this.state.currentItem.text}
+                     onChange={this.handleInput} >
+
+              </input>
               <button type="submit">Add</button>
             </form>
           </header>
