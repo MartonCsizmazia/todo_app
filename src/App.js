@@ -12,6 +12,8 @@ class App extends React.Component {
                 key: ''
             }
         }
+        this.addItem = this.addItem.bind(this);
+        this.handleInput = this.handleInput.bind(this);
     }
     handleInput(e){
         this.setState({
@@ -20,6 +22,22 @@ class App extends React.Component {
                 key: Date.now()
             }
         })
+    }
+
+    addItem(e) {
+        e.preventDefault();
+        const newItem = this.state.currentItem;
+        console.log(newItem);
+        if(newItem.text !=="") {
+            const items = [...this.state.items, newItem];
+            this.setState({
+                items: items,
+                currentItem:{
+                    text:'',
+                    key:''
+                }
+            })
+        }
     }
 
     render() {
