@@ -3,9 +3,18 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends React.Component {
-  render() {
+    constructor(props) {
+        super(props);
+        this.state = {
+            items: [],
+            currentItem: {
+                text: '',
+                key: ''
+            }
+        }
+    }
 
-
+    render() {
     return (
         <div className="App">
           <header>
@@ -17,6 +26,6 @@ class App extends React.Component {
         </div>
       );
     }
-  }
+}
 
 export default App;

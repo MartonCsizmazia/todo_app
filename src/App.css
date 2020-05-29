@@ -9,7 +9,7 @@ body{
 }
 
 #to-do-form input{
-    background-color: rgba(27, 112, 137, 1);
+    background-color: rgba(27, 112, 137, 0.53);
     border: 0;
     color: #fff;
     width: 200px;
@@ -23,7 +23,7 @@ body{
     color: rgba(255,255,255,0.5);
 }
 
-}
+
 #to-do-form input:focus{
     outline: none;
 }
@@ -32,6 +32,10 @@ body{
     width: 80px;
     border-radius: 5px;
     border: 0;
-    background-color:rgba(202, 156, 24, 1);
+    background-color: rgba(202, 156, 24, 0.47);
     cursor: pointer;
+}
+
+#to-do-form button:focus{
+    outline: none;
 }
